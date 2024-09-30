@@ -1,0 +1,30 @@
+ /* Thêm khoảng cách và màu sắc cho giao diện */
+ body {
+    background-color: #f8f9fa; /* Màu nền nhẹ cho toàn trang */
+}
+h1, h2 {
+    color: #343a40; /* Đổi màu chữ của tiêu đề */
+}
+/* Thêm hiệu ứng hover cho các hàng trong bảng */
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+/* Căn chỉnh nút cập nhật và xóa */
+.btn {
+    margin-right: 5px;
+}
+/* Thêm màu sắc cho các trạng thái đơn hàng */
+.badge-pending {
+    background-color: #ffc107;
+}
+.badge-completed {
+    background-color: #28a745;
+}
+.badge-canceled {
+    background-color: #dc3545;
+}
+/* Logo */
+.logo {
+    width: 50px; /* Đặt kích thước logo */
+    height: auto;
+}

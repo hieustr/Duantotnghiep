@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Home/css/dangnhap.css">
+    <!-- Custom styles -->
+    <style>
+        .login_btn {
+            width: 100%; /* Chiều rộng đầy đủ để không bị tràn chữ */
+            padding: 10px; /* Tăng padding để nút không bị bó hẹp */
+            font-size: 1.1em; /* Kích cỡ chữ lớn hơn để hiển thị rõ */
+        }
+
+        .card {
+            height: auto;
+            margin-top: 100px;
+            width: 400px; /* Đảm bảo card đủ rộng */
+        }
+
+        .social_icon span {
+            font-size: 30px;
+            margin-left: 10px;
+            color: #fff;
+        }
+
+        .social_icon span:hover {
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Forgot Password</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><i class="fab fa-facebook-square"></i></span>
+                        <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <!-- Email Field -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+
+                        <!-- Centered Submit Button with full width -->
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="submit" value="Send Reset Link" class="btn login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Remembered your password? <a href="dangnhap.html">Sign In</a>
+                    </div>
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account? <a href="dangky.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
