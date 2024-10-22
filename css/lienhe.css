@@ -1,0 +1,122 @@
+    /* Màu sắc */
+
+    .navbar-nav .nav-link{
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .d-flex .nav-link {
+        font-size: 17px;  
+        padding: 1px;     
+        margin-left: 10px;
+        margin-right: 0;  
+    }
+    
+    .d-flex.align-items-center {
+        margin-left: 0;   
+    }
+    
+
+
+    body {
+        background-color: #f8f9fa; 
+    }
+    
+    .navbar {
+        background-image: linear-gradient(#3d0066ce, #160066e1, #3f0082fb);
+
+    }
+    
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+    }
+    
+    .navbar-brand:hover,
+    .nav-link:hover {
+        color: #df678c !important;
+    }
+    /* Thêm khoảng cách cho đăng nhập và đăng ký */
+    .nav-link.login {
+        margin-right: 20px; 
+    }
+
+/* logo */
+.navbar-brand img {
+    width: 50px; ;
+    height: 50px;
+}
+
+
+.service-box img {
+    max-width: 100px;
+}
+
+.service-box h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+/* Tiêu đề */
+h2.text-center {
+    color: rgba(0, 0, 0, 0.697);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Form Liên Hệ */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Các Trường Nhập Liệu */
+.form-control {
+    border-radius: 6px;
+    padding: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+}
+
+/* Nút Gửi */
+input.btn.btn-primary {
+    color: #df678c; 
+    font-weight: 700; 
+    background-color: #3D2AA0;
+    width: auto; 
+    border: none; 
+    border-radius: 25px;
+    padding: 10px 20px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+
+  
+}
+input.btn.btn-primary:hover {
+    background-color: #df678c; 
+    color: #3D2AA0;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Label */
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Khoảng cách giữa các trường */
+.mb-3 {
+    margin-bottom: 20px;
+}
+

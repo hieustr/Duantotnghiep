@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ - Tech Titans</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Home/css/home.css">
+    <style>
+        /* CSS Tùy Chỉnh cho Trang Dịch Vụ */
+        .service-header {
+            background: url('/Home/img/service-header.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .service-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .service-box {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .service-box .card-body {
+            padding: 20px;
+        }
+
+        .service-box h5 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .service-header {
+                padding: 60px 0;
+            }
+
+            .service-header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Thanh Điều Hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Home/html/Home.html">
+                <img src="/Home/img/logoTechTitan.jpg" alt="Tech Titans Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/html/Home.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dịch Vụ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Giúp việc theo giờ</a></li>
+                            <li><a class="dropdown-item" href="#">Tổng vệ sinh</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh sau xây dựng</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh văn phòng</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt thảm</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh bể bơi</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt rèm cửa</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn dẹp nhà cửa dịp lễ</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh máy lạnh</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn vệ sinh trường học</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/html/About.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/html/Contact.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Khiếu nại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đánh giá TechTitans</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a class="nav-link login" href="/Home/html/dangnhap.html">Đăng nhập</a>
+                    <a class="nav-link" href="/Home/html/dangky.html">Đăng ký</a>
+
+                    <!-- Ngôn ngữ -->
+                    <div class="dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ngôn Ngữ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="vi" style="display: flex; align-items: center;">
+                                    <img src="/Home/img/vietnam.png" alt="Vietnam Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    Tiếng Việt
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="en" style="display: flex; align-items: center;">
+                                    <img src="/Home/img/england.png" alt="English Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Dịch Vụ -->
+        <div class="service-header d-flex justify-content-center align-items-center">
+            <div class="container text-center">
+                <h1>Dịch Vụ Chúng Tôi Cung Cấp</h1>
+                <p>Các dịch vụ chuyên nghiệp và đáng tin cậy để đáp ứng mọi nhu cầu của bạn.</p>
+            </div>
+        </div>
+
+        <!-- Phần Các Dịch Vụ -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center">Các Dịch Vụ Chính</h2>
+                <div class="row">
+                    <!-- Dịch Vụ 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-box h-100">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Giúp việc theo giờ">
+                            <div class="card-body">
+                                <h5 class="card-title">Giúp việc theo giờ</h5>
+                                <p class="card-text">Dịch vụ giúp việc linh hoạt theo giờ, phù hợp với lịch trình của bạn.</p>
+                                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dịch Vụ 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-box h-100">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Tổng vệ sinh">
+                            <div class="card-body">
+                                <h5 class="card-title">Tổng vệ sinh</h5>
+                                <p class="card-text">Giải pháp vệ sinh toàn diện cho căn hộ, nhà ở và văn phòng của bạn.</p>
+                                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dịch Vụ 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-box h-100">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Vệ sinh sau xây dựng">
+                            <div class="card-body">
+                                <h5 class="card-title">Vệ sinh sau xây dựng</h5>
+                                <p class="card-text">Dịch vụ vệ sinh chuyên sâu sau xây dựng, đảm bảo không gian sạch sẽ và an toàn.</p>
+                                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dịch Vụ 4 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-box h-100">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Vệ sinh văn phòng">
+                            <div class="card-body">
+                                <h5 class="card-title">Vệ sinh văn phòng</h5>
+                                <p class="card-text">Dịch vụ dọn dẹp văn phòng chuyên nghiệp, tạo môi trường làm việc sạch sẽ và thoải mái.</p>
+                                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dịch Vụ 5 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-box h-100">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Giặt thảm">
+                            <div class="card-body">
+                                <h5 class="card-title">Giặt thảm</h5>
+                                <p class="card-text">Dịch vụ giặt thảm chuyên sâu, loại bỏ bụi bẩn và mùi hôi hiệu quả.</p>
+                                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Dịch Vụ 6 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-box h-100">
+                            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Vệ sinh bể bơi">
+                            <div class="card-body">
+                                <h5 class="card-title">Vệ sinh bể bơi</h5>
+                                <p class="card-text">Dịch vụ vệ sinh bể bơi sạch sẽ, an toàn và đảm bảo chất lượng nước.</p>
+                                <a href="#" class="btn btn-primary">Xem Chi Tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bạn có thể thêm thêm các dịch vụ khác tương tự -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+        <!-- JavaScript -->
+        <script>
+            // Tạo một đối tượng chứa văn bản cho cả hai ngôn ngữ
+            const translations = {
+                vi: {
+                    home: 'Trang Chủ',
+                    services: 'Dịch Vụ',
+                    about: 'Giới Thiệu',
+                    contact: 'Liên Hệ',
+                    support: 'Hỗ trợ',
+                    complain: 'Khiếu nại',
+                    rating: 'Đánh giá TechTitans',
+                    login: 'Đăng nhập',
+                    register: 'Đăng ký',
+                    language: 'Ngôn ngữ',
+                    bannerHeading: 'Giúp việc nhà theo giờ',
+                    bannerText: 'Dịch vụ giúp việc nhà chuyên nghiệp, tiện lợi và đáng tin cậy.',
+                    footerText: '© 2024 Tech Titans. Bản quyền thuộc về tất cả.',
+                    serviceSectionTitle: 'Các Dịch Vụ Chính',
+                    serviceButton: 'Xem Chi Tiết'
+                },
+                en: {
+                    home: 'Home',
+                    services: 'Services',
+                    about: 'About Us',
+                    contact: 'Contact',
+                    support: 'Support',
+                    complain: 'Complain',
+                    rating: 'Rating TechTitans',
+                    login: 'Login',
+                    register: 'Register',
+                    language: 'Language',
+                    bannerHeading: 'Hourly House Cleaning',
+                    bannerText: 'Professional, convenient, and reliable house cleaning services.',
+                    footerText: '© 2024 Tech Titans. All rights reserved.',
+                    serviceSectionTitle: 'Our Main Services',
+                    serviceButton: 'View Details'
+                }
+            };
+
+            // Hàm thay đổi ngôn ngữ
+            function changeLanguage(lang) {
+                // Cập nhật các liên kết trong navbar
+                document.querySelectorAll('.nav-link')[0].textContent = translations[lang].home;
+                document.querySelectorAll('.nav-link')[1].textContent = translations[lang].services;
+                document.querySelectorAll('.nav-link')[2].textContent = translations[lang].about;
+                document.querySelectorAll('.nav-link')[3].textContent = translations[lang].contact;
+                document.querySelectorAll('.nav-link')[4].textContent = translations[lang].support;
+                document.querySelectorAll('.nav-link')[5].textContent = translations[lang].complain;
+                document.querySelectorAll('.nav-link')[6].textContent = translations[lang].rating;
+                document.querySelectorAll('.nav-link')[7].textContent = translations[lang].login;
+                document.querySelectorAll('.nav-link')[8].textContent = translations[lang].register;
+                document.querySelectorAll('.nav-link')[9].textContent = translations[lang].language;
+
+                // Cập nhật phần Header Dịch Vụ
+                const serviceHeaderH1 = document.querySelector('.service-header h1');
+                if (serviceHeaderH1) {
+                    serviceHeaderH1.textContent = lang === 'vi' ? 'Dịch Vụ Chúng Tôi Cung Cấp' : 'Our Provided Services';
+                }
+                const serviceHeaderP = document.querySelector('.service-header p');
+                if (serviceHeaderP) {
+                    serviceHeaderP.textContent = lang === 'vi' ? 'Các dịch vụ chuyên nghiệp và đáng tin cậy để đáp ứng mọi nhu cầu của bạn.' : 'Professional and reliable services to meet all your needs.';
+                }
+
+                // Cập nhật tiêu đề phần các dịch vụ
+                const serviceSectionTitle = document.querySelector('.section-title.text-center');
+                if (serviceSectionTitle) {
+                    serviceSectionTitle.textContent = lang === 'vi' ? translations[lang].serviceSectionTitle : 'Our Main Services';
+                }
+
+                // Cập nhật các nút "Xem Chi Tiết"
+                document.querySelectorAll('.btn-primary').forEach(button => {
+                    button.textContent = translations[lang].serviceButton;
+                });
+
+                // Cập nhật footer
+                const footerText = document.querySelector('.footer-text');
+                if (footerText) {
+                    footerText.textContent = translations[lang].footerText;
+                }
+            }
+
+            // Thêm sự kiện khi người dùng chọn ngôn ngữ
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
+
+            // Liên kết giữa các trang và tải footer
+            function loadComponent(component, elementId) {
+                fetch(component)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(elementId).innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading component:', error));
+            }
+
+            window.onload = function () {
+                loadComponent('/Home/html/footer.html', 'footer');
+            }
+        </script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>

@@ -1,81 +1,393 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <head>
-    <title>Sign Up Page</title>
-    <!--Bootstrap 4 CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Login Page</title>
+
+    <!--Bootsrap 4 CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="/Home/css/dangnhap.css">
+    <link rel="stylesheet" type="text/css" href="/Home/css/dangky.css">
 </head>
+
 <body>
-<div class="container">
-    <div class="d-flex justify-content-center h-100">
-        <div class="card">
-            <div class="card-header">
-                <h3>Sign Up</h3>
-                <div class="d-flex justify-content-end social_icon">
-                    <span><i class="fab fa-facebook-square"></i></span>
-                    <span><i class="fab fa-google-plus-square"></i></span>
-                    <span><i class="fab fa-twitter-square"></i></span>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Home/html/Home.html"><img src="/Home/img/logo.png" alt=""
+                    style="height: 55px; width: 55px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Home.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Dịch Vụ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Giúp việc theo giờ</a></li>
+                            <li><a class="dropdown-item" href="#">Tổng vệ sinh</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh sau xây dựng</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh văn phòng</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt thảm</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh bể bơi</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt rèm cửa</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn dẹp nhà cửa dịp lễ</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh máy lạnh</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn vệ sinh trường học</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotro.html">Hỗ Trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="khieunai.html">Khiếu Nại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đánh Giá TechTitans</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <a class="nav-link login" href="dangnhap.html">Đăng Nhập</a>
+                    <a class="nav-link" href="#">Đăng Ký</a>
+
+                    <!-- Ngôn ngữ -->
+                    <div class="dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Ngôn Ngữ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="vi"
+                                    style="display: flex; align-items: center;">
+                                    <img src="/Home/img/vietnam.png" alt="Vietnam Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    Tiếng Việt
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="en"
+                                    style="display: flex; align-items: center;">
+                                    <img src="/Home/img/england.png" alt="England Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card-body">
-                <form>
-                    <!-- Username Field -->
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="username" required>
-                    </div>
+        </div>
+    </nav>
 
-                    <!-- Email Field -->
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        </div>
-                        <input type="email" class="form-control" placeholder="email" required>
-                    </div>
+    <!-- Phần tử loading -->
+    <div id="loading"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; text-align:center; color:white; font-size:2rem; padding-top:20%;">
+        Đang tải...
+    </div>
 
-                    <!-- Password Field -->
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="password" required>
-                    </div>
 
-                    <!-- Confirm Password Field -->
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="confirm password" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="submit" value="Sign Up" class="btn float-right login_btn">
-                    </div>
-                </form>
-            </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-center links">
-                    Already have an account? <a href="dangnhap.html">Sign In</a>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Đăng ký</h3>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <a href="#">Forgot your password?</a>
+
+                <div class="card-body">
+                    <form>
+
+                        <!-- Email Field -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+
+
+                        <!-- Password Field -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+
+                        <!-- Confirm Password Field -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Confirm password" required>
+                        </div>
+
+                        <!-- Username Field -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" required>
+                        </div>
+
+                        <!-- Phone Field -->
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Phone" required>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <input type="submit" value="Đăng ký" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Bạn đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="quenmatkhau.html">Quên mật khẩu?</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap JS and jQuery -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div id="footer"></div>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Tạo một đối tượng chứa văn bản cho cả hai ngôn ngữ
+        const translations = {
+            vi: {
+                home: 'Trang Chủ',
+                services: 'Dịch Vụ',
+                about: 'Giới Thiệu',
+                contact: 'Liên Hệ',
+                support: 'Hỗ trợ',
+                complain: 'Khiếu nại',
+                rating: 'Đánh giá TechTiTans',
+                login: 'Đăng nhập',
+                register: 'Đăng ký',
+                language: 'Ngôn ngữ',
+                bannerHeading: 'Giúp việc nhà theo giờ',
+                bannerText: 'Dịch vụ giúp việc nhà chuyên nghiệp, tiện lợi và đáng tin cậy.',
+
+                registerTitle: "Đăng ký",
+                emailPlaceholder: "Email",
+                passwordPlaceholder: "Password",
+                confirmPasswordPlaceholder: "Confirm password",
+                usernamePlaceholder: "Username",
+                phonePlaceholder: "Phone",
+                registerBtn: "Đăng ký",
+                haveAccountText: "Bạn đã có tài khoản?",
+                login: "Đăng Nhập",
+                forgotPassword: "Quên mật khẩu?",
+
+                // Nội dung footer
+                businessLicenseNumber: "Số GCNĐKDN",
+                pharmacyLicenseNumber: "Số GCN đủ điều kiện kinh doanh dược",
+                businessType: "Loại hình kinh doanh",
+                retailBusiness: "Cơ sở bán lẻ thuốc, Nhà thuốc",
+                businessLicense: "Giấy phép kinh doanh",
+                policySupport: "Chính sách và hỗ trợ",
+                aboutUs1: "Giới thiệu",
+                transactionConditions: "Điều kiện giao dịch chung",
+                termsOfUse: "Điều khoản sử dụng",
+                paymentPrivacy: "Bảo mật thông tin thanh toán",
+                shippingPolicy: "Chính sách vận chuyển và giao nhận",
+                personalDataProtection: "Chính sách bảo vệ dữ liệu cá nhân",
+                contact: "Liên hệ",
+                address: "207 Đ. Lê Đại Hành, Phường 13, Quận 11, Hồ Chí Minh",
+                phone: "(028) 73022068",
+                email: "hotro@circa.vn",
+                recruitment: "Tuyển dụng",
+                franchise: "Nhượng quyền",
+                downloadApp: "Tải app tại:",
+            },
+            en: {
+                home: 'Home',
+                services: 'Services',
+                about: 'About Us',
+                contact: 'Contact',
+                support: 'Support',
+                complain: ' Complain',
+                rating: 'Rating TechTiTans',
+                login: 'Login',
+                register: 'Register',
+                language: 'Language',
+                bannerHeading: 'Hourly House Cleaning',
+                bannerText: 'Professional, convenient, and reliable house cleaning services.',
+
+                registerTitle: "Register",
+                emailPlaceholder: "Email",
+                passwordPlaceholder: "Password",
+                confirmPasswordPlaceholder: "Confirm password",
+                usernamePlaceholder: "Username",
+                phonePlaceholder: "Phone",
+                registerBtn: "Register",
+                haveAccountText: "Already have an account?",
+                login: "Login",
+                forgotPassword: "Forgot your password?",
+
+
+
+                // Nội dung footer
+                businessLicenseNumber: "Business License Number",
+                pharmacyLicenseNumber: "Pharmacy License Number",
+                businessType: "Business Type",
+                retailBusiness: "Retail Pharmacy Business",
+                businessLicense: "Business License",
+                policySupport: "Policies and Support",
+                aboutUs1: "About Us",
+                transactionConditions: "Transaction Conditions",
+                termsOfUse: "Terms of Use",
+                paymentPrivacy: "Payment Privacy",
+                shippingPolicy: "Shipping and Delivery Policy",
+                personalDataProtection: "Personal Data Protection Policy",
+                contact: "Contact",
+                address: "207 Le Dai Hanh, Ward 13, District 11, Ho Chi Minh City",
+                phone: "(028) 73022068",
+                email: "hotro@circa.vn",
+                recruitment: "Recruitment",
+                franchise: "Franchise",
+                downloadApp: "Download the app at:",
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelector('.nav-link.active').textContent = translations[lang].home;
+            document.querySelectorAll('.nav-link')[1].textContent = translations[lang].services;
+            document.querySelectorAll('.nav-link')[2].textContent = translations[lang].about;
+            document.querySelectorAll('.nav-link')[3].textContent = translations[lang].contact;
+            document.querySelectorAll('.nav-link')[4].textContent = translations[lang].support;
+            document.querySelectorAll('.nav-link')[5].textContent = translations[lang].complain;
+            document.querySelectorAll('.nav-link')[6].textContent = translations[lang].rating;
+            document.querySelectorAll('.nav-link')[7].textContent = translations[lang].login;
+            document.querySelectorAll('.nav-link')[8].textContent = translations[lang].register;
+            document.querySelectorAll('.nav-link')[9].textContent = translations[lang].language;
+
+
+            document.querySelector('.card-header h3').textContent = translations[lang].registerTitle;
+            document.querySelector('input[type="text"]').placeholder = translations[lang].usernamePlaceholder;
+            document.querySelector('input[type="password"]').placeholder = translations[lang].passwordPlaceholder;
+
+
+
+            document.querySelector('.login_btn').value = translations[lang].registerBtn;
+            document.querySelector('.card-footer .links').innerHTML = `${translations[lang].haveAccountText} <a href="dangky.html">${translations[lang].login}</a>`;
+            document.querySelector('.card-footer div:last-child a').textContent = translations[lang].forgotPassword;
+
+
+
+       
+
+            // Footer    
+            const footer = document.querySelector('.footer');
+
+            // Cập nhật Logo và Chứng nhận
+            footer.querySelector('ul li:nth-child(1)').innerHTML = `${translations[lang].businessLicenseNumber}: <span class="fw-medium">0317045088</span>`;
+            footer.querySelector('ul li:nth-child(2)').innerHTML = `${translations[lang].pharmacyLicenseNumber}: <span class="fw-medium">11048/ĐKKDD-HCM</span>`;
+            footer.querySelector('ul li:nth-child(3)').innerHTML = `${translations[lang].businessType}: <span class="fw-medium">${translations[lang].retailBusiness}</span>`;
+            footer.querySelector('ul li:nth-child(4) a').textContent = translations[lang].businessLicense;
+
+            // Cập nhật Chính sách và hỗ trợ
+            const policySupportSection = footer.querySelectorAll('.col-lg-4')[1]; // Chọn đúng cột chứa Chính sách và Hỗ trợ
+            policySupportSection.querySelector('.footer-title').textContent = translations[lang].policySupport;
+            const policyLinks = policySupportSection.querySelectorAll('ul li a');
+            policyLinks[0].textContent = translations[lang].aboutUs;
+            policyLinks[1].textContent = translations[lang].transactionConditions;
+            policyLinks[2].textContent = translations[lang].termsOfUse;
+            policyLinks[3].textContent = translations[lang].paymentPrivacy;
+            policyLinks[4].textContent = translations[lang].shippingPolicy;
+            policyLinks[5].textContent = translations[lang].personalDataProtection;
+
+            // Cập nhật Liên hệ
+            const contactSection = footer.querySelectorAll('.col-lg-4')[2]; // Chọn đúng cột chứa Liên hệ
+            contactSection.querySelector('.footer-title').textContent = translations[lang].contact;
+            const contactLinks = contactSection.querySelectorAll('ul li');
+            contactLinks[0].querySelector('a').textContent = translations[lang].address;
+            contactLinks[1].querySelector('span').textContent = translations[lang].phone;
+            contactLinks[2].querySelector('a').textContent = translations[lang].email;
+
+            // Tuyển dụng và Nhượng quyền
+            const jobLinks = contactSection.querySelectorAll('.d-flex.gap-3 a');
+            jobLinks[0].textContent = translations[lang].recruitment;
+            jobLinks[1].textContent = translations[lang].franchise;
+
+            // Cập nhật phần Tải ứng dụng
+            contactSection.querySelector('.app-download span').textContent = translations[lang].downloadApp;
+        }
+
+        // Thêm sự kiện khi người dùng chọn ngôn ngữ
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
+        //liên kết giữa các trang 
+
+        function loadComponent(component, elementId) {
+            fetch(component)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                });
+        }
+        window.onload = function () {
+            loadComponent('footer.html', 'footer');
+        }
+
+
+        // Xử lý hiển thị loading khi nhấn "Đăng Nhập"
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Ngăn chặn hành vi submit mặc định
+
+            // Hiển thị overlay loading
+            document.getElementById('loading').style.display = 'block';
+
+            // Giả lập xử lý trong 2 giây, sau đó chuyển hướng (hoặc xử lý đăng nhập thực sự)
+            setTimeout(function () {
+                window.location.href = 'dangnhap1.html'; // Trang bạn muốn điều hướng tới
+            }, 2000); // Thời gian xử lý (có thể thay đổi)
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

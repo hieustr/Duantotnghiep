@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nhân viên</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="/Home/css/nhanvien.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-box"></i> Quản lý đơn hàng</a>
+        <a href="#"><i class="fas fa-user"></i> Quản lý nhân viên</a>
+        <a href="#"><i class="fas fa-chart-line"></i> Báo cáo</a>
+        <a href="#" class="logout-btn" id="logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Navbar -->
+        <div class="navbar d-flex align-items-center">
+            <h3>Dashboard Nhân viên</h3>
+        </div>
+
+        <div class="container mt-4">
+            <h4 class="mb-4">Quản lý Đơn hàng</h4>
+            <div class="table-container">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID Đơn hàng</th>
+                                <th>Tên Khách hàng</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1001</td>
+                                <td>Nguyễn Văn A</td>
+                                <td><span class="badge badge-warning">Đang xử lý</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Chi tiết</button>
+                                    <button class="btn btn-success btn-sm">Duyệt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1002</td>
+                                <td>Trần Thị B</td>
+                                <td><span class="badge badge-success">Đã hoàn thành</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Chi tiết</button>
+                                    <button class="btn btn-danger btn-sm">Hủy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1003</td>
+                                <td>Nguyễn Văn C</td>
+                                <td><span class="badge badge-danger">Đã hủy</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Chi tiết</button>
+                                    <button class="btn btn-secondary btn-sm" disabled>Không thể duyệt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1004</td>
+                                <td>Phạm Thị D</td>
+                                <td><span class="badge badge-warning">Đang xử lý</span></td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Chi tiết</button>
+                                    <button class="btn btn-success btn-sm">Duyệt</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 TechTitans. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Kiểm tra nếu chưa đăng nhập
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = 'dangnhap.html';
+        }
+
+        // Xử lý đăng xuất
+        document.getElementById('logout').addEventListener('click', function () {
+            sessionStorage.removeItem('loggedIn');
+            window.location.href = 'dangnhap.html';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

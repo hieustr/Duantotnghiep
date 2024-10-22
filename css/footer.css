@@ -1,24 +1,41 @@
-/* CSS chỉ áp dụng cho phần footer với class "custom-footer" */
-.custom-footer {
-    background-color: #333; /* Màu nền tối */
-    color: #ff0000; /* Màu chữ đỏ */
-}
 
-.custom-footer h5 {
-    font-weight: bold;
-    color: #ff0000; /* Màu chữ đỏ cho tiêu đề */
-}
+        /* Custom CSS */
+        .footer {
+            background-color: #160066e1; /* Nền màu hồng */
+            color: #ffffff; /* Chữ màu trắng */
+            padding: 10px 0;
+        }
 
-.custom-footer a {
-    color: #ff0000; /* Màu liên kết đỏ */
-    text-decoration: none;
-}
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-.custom-footer a:hover {
-    text-decoration: underline;
-    color: #ff6666; /* Màu khi hover */
-}
+        .footer a:hover {
+            text-decoration: underline;
+            color: aquamarine;
+        }
 
-.custom-footer .text-center {
-    color: #ff0000; /* Màu chữ của phần text center */
-}
+        .footer .footer-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .app-links img {
+            width: 108px;
+            height: 32px;
+            margin-right: 10px;
+        }
+
+        .app-download {
+            margin-top: 20px; /* Khoảng cách giữa phương thức thanh toán và phần tải app */
+        }

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Tech Titans</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Home/css/gioithieu.css">
+
+</head>
+
+<body>
+    <!-- Thanh Điều Hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Home/html/Home.html">
+                <img src="/Home/img/logo.png" alt="Tech Titans Logo" style="height: 55px; width: 55px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home/html/Home.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dịch Vụ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Giúp việc theo giờ</a></li>
+                            <li><a class="dropdown-item" href="#">Tổng vệ sinh</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh sau xây dựng</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh văn phòng</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt thảm</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh bể bơi</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt rèm cửa</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn dẹp nhà cửa dịp lễ</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh máy lạnh</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn vệ sinh trường học</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotro.html">Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="khieunai.html">Khiếu nại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đánh giá TechTitans</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a class="nav-link login" href="/Home/html/dangnhap.html">Đăng nhập</a>
+                    <a class="nav-link" href="/Home/html/dangky.html">Đăng ký</a>
+
+                    <!-- Ngôn ngữ -->
+                    <div class="dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ngôn Ngữ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="vi"
+                                    style="display: flex; align-items: center;">
+                                    <img src="/Home/img/vietnam.png" alt="Vietnam Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    Tiếng Việt
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="en"
+                                    style="display: flex; align-items: center;">
+                                    <img src="/Home/img/england.png" alt="English Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Header Giới Thiệu -->
+    <div class="about-header d-flex justify-content-center align-items-center">
+        <div class="container text-center">
+            <h1>Chào mừng đến với Tech Titans</h1>
+            <p>Chúng tôi cung cấp các dịch vụ tiện ích và chất lượng cao, giúp cuộc sống của bạn trở nên dễ dàng hơn.
+            </p>
+        </div>
+    </div>
+
+    <!-- Phần Lịch Sử Công Ty -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Lịch Sử Hình Thành</h2>
+            <p class="text-center">Tech Titans ra đời vào năm 2020 với sứ mệnh mang đến các dịch vụ gia đình tiện ích và
+                hiện đại nhất. Từ những bước đầu phát triển, chúng tôi đã không ngừng nỗ lực để cải tiến và nâng cao
+                chất lượng dịch vụ, giúp hàng triệu gia đình Việt Nam sống tiện nghi hơn.</p>
+        </div>
+    </section>
+
+    <!-- Giá Trị Cốt Lõi -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Giá Trị Cốt Lõi</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4>Tận Tâm</h4>
+                    <p>Chúng tôi luôn tận tâm trong từng dịch vụ, đảm bảo khách hàng nhận được sự hài lòng tuyệt đối.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Chất Lượng</h4>
+                    <p>Chất lượng dịch vụ là ưu tiên hàng đầu của Tech Titans, giúp bạn có một cuộc sống tốt đẹp hơn.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Uy Tín</h4>
+                    <p>Chúng tôi cam kết mang đến sự uy tín và đáng tin cậy trong từng trải nghiệm dịch vụ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Đội Ngũ -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Đội Ngũ Chuyên Nghiệp</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/400x250" alt="Team Member 1" class="team-photo mb-3">
+                    <h4>Nguyễn Văn A</h4>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/400x250" alt="Team Member 2" class="team-photo mb-3">
+                    <h4>Trần Thị B</h4>
+                    <p>CTO</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/400x250" alt="Team Member 3" class="team-photo mb-3">
+                    <h4>Lê Minh C</h4>
+                    <p>COO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phản Hồi Khách Hàng -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Khách Hàng Nói Gì</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <img src="https://via.placeholder.com/80" alt="Customer 1">
+                            <div>
+                                <p>"Dịch vụ của Tech Titans thật sự chuyên nghiệp và đáng tin cậy. Tôi rất hài lòng với
+                                    chất lượng của họ."</p>
+                                <h5>Nguyễn Hoàng</h5>
+                                <span>Khách hàng</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <img src="https://via.placeholder.com/80" alt="Customer 2">
+                            <div>
+                                <p>"Tôi đã sử dụng dịch vụ dọn dẹp nhà cửa của Tech Titans, và kết quả vượt quá mong
+                                    đợi. Rất đáng giá!"</p>
+                                <h5>Trần Phương</h5>
+                                <span>Khách hàng</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thêm thêm các testimonial nếu cần -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Liên Hệ -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Liên Hệ Với Chúng Tôi</h2>
+            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7. Nếu bạn có bất kỳ câu hỏi nào, đừng ngần ngại liên hệ với chúng
+                tôi qua:</p>
+            <div class="form-group">
+                <input type="submit" value="support@techtitans.com" class="btn btn-primary">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Tạo một đối tượng chứa văn bản cho cả hai ngôn ngữ
+        const translations = {
+            vi: {
+                home: 'Trang Chủ',
+                services: 'Dịch Vụ',
+                about: 'Giới Thiệu',
+                contact: 'Liên Hệ',
+                support: 'Hỗ trợ',
+                complain: 'Khiếu nại',
+                rating: 'Đánh giá TechTitans',
+                login: 'Đăng nhập',
+                register: 'Đăng ký',
+                language: 'Ngôn ngữ',
+
+                // Nội dung footer
+                businessLicenseNumber: "Số GCNĐKDN",
+                pharmacyLicenseNumber: "Số GCN đủ điều kiện kinh doanh dược",
+                businessType: "Loại hình kinh doanh",
+                retailBusiness: "Cơ sở bán lẻ thuốc, Nhà thuốc",
+                businessLicense: "Giấy phép kinh doanh",
+                policySupport: "Chính sách và hỗ trợ",
+                aboutUs1: "Giới thiệu",
+                transactionConditions: "Điều kiện giao dịch chung",
+                termsOfUse: "Điều khoản sử dụng",
+                paymentPrivacy: "Bảo mật thông tin thanh toán",
+                shippingPolicy: "Chính sách vận chuyển và giao nhận",
+                personalDataProtection: "Chính sách bảo vệ dữ liệu cá nhân",
+                contact: "Liên hệ",
+                address: "207 Đ. Lê Đại Hành, Phường 13, Quận 11, Hồ Chí Minh",
+                phone: "(028) 73022068",
+                email: "hotro@circa.vn",
+                recruitment: "Tuyển dụng",
+                franchise: "Nhượng quyền",
+                downloadApp: "Tải app tại:",
+            },
+            en: {
+                home: 'Home',
+                services: 'Services',
+                about: 'About Us',
+                contact: 'Contact',
+                support: 'Support',
+                complain: 'Complain',
+                rating: 'Rating TechTitans',
+                login: 'Login',
+                register: 'Register',
+                language: 'Language',
+
+                // Nội dung footer
+                businessLicenseNumber: "Business License Number",
+                pharmacyLicenseNumber: "Pharmacy License Number",
+                businessType: "Business Type",
+                retailBusiness: "Retail Pharmacy Business",
+                businessLicense: "Business License",
+                policySupport: "Policies and Support",
+                aboutUs1: "About Us",
+                transactionConditions: "Transaction Conditions",
+                termsOfUse: "Terms of Use",
+                paymentPrivacy: "Payment Privacy",
+                shippingPolicy: "Shipping and Delivery Policy",
+                personalDataProtection: "Personal Data Protection Policy",
+                contact: "Contact",
+                address: "207 Le Dai Hanh, Ward 13, District 11, Ho Chi Minh City",
+                phone: "(028) 73022068",
+                email: "hotro@circa.vn",
+                recruitment: "Recruitment",
+                franchise: "Franchise",
+                downloadApp: "Download the app at:",
+            }
+        };
+
+        // Hàm thay đổi ngôn ngữ
+        function changeLanguage(lang) {
+            document.querySelectorAll('.nav-link')[0].textContent = translations[lang].home;
+            document.querySelectorAll('.nav-link')[1].textContent = translations[lang].services;
+            document.querySelectorAll('.nav-link')[2].textContent = translations[lang].about;
+            document.querySelectorAll('.nav-link')[3].textContent = translations[lang].contact;
+            document.querySelectorAll('.nav-link')[4].textContent = translations[lang].support;
+            document.querySelectorAll('.nav-link')[5].textContent = translations[lang].complain;
+            document.querySelectorAll('.nav-link')[6].textContent = translations[lang].rating;
+            document.querySelectorAll('.nav-link')[7].textContent = translations[lang].login;
+            document.querySelectorAll('.nav-link')[8].textContent = translations[lang].register;
+            document.querySelectorAll('.nav-link')[9].textContent = translations[lang].language;
+
+
+            // Phần header
+            const aboutHeaderH1 = document.querySelector('.about-header h1');
+            if (aboutHeaderH1) {
+                aboutHeaderH1.textContent = lang === 'vi' ? 'Chào mừng đến với Tech Titans' : 'Welcome to Tech Titans';
+            }
+            const aboutHeaderP = document.querySelector('.about-header p');
+            if (aboutHeaderP) {
+                aboutHeaderP.textContent = lang === 'vi' ? 'Chúng tôi cung cấp các dịch vụ tiện ích và chất lượng cao, giúp cuộc sống của bạn trở nên dễ dàng hơn.' : 'We provide convenient and high-quality services to make your life easier.';
+            }
+
+            // Lịch sử hình thành
+            const historySection = document.querySelector('.section-title.text-center');
+            if (historySection) {
+                historySection.textContent = lang === 'vi' ? 'Lịch Sử Hình Thành' : 'Our History';
+            }
+
+            // Footer    
+            const footer = document.querySelector('.footer');
+
+            // Cập nhật Logo và Chứng nhận
+            footer.querySelector('ul li:nth-child(1)').innerHTML = `${translations[lang].businessLicenseNumber}: <span class="fw-medium">0317045088</span>`;
+            footer.querySelector('ul li:nth-child(2)').innerHTML = `${translations[lang].pharmacyLicenseNumber}: <span class="fw-medium">11048/ĐKKDD-HCM</span>`;
+            footer.querySelector('ul li:nth-child(3)').innerHTML = `${translations[lang].businessType}: <span class="fw-medium">${translations[lang].retailBusiness}</span>`;
+            footer.querySelector('ul li:nth-child(4) a').textContent = translations[lang].businessLicense;
+
+            // Cập nhật Chính sách và hỗ trợ
+            const policySupportSection = footer.querySelectorAll('.col-lg-4')[1]; // Chọn đúng cột chứa Chính sách và Hỗ trợ
+            policySupportSection.querySelector('.footer-title').textContent = translations[lang].policySupport;
+            const policyLinks = policySupportSection.querySelectorAll('ul li a');
+            policyLinks[0].textContent = translations[lang].aboutUs;
+            policyLinks[1].textContent = translations[lang].transactionConditions;
+            policyLinks[2].textContent = translations[lang].termsOfUse;
+            policyLinks[3].textContent = translations[lang].paymentPrivacy;
+            policyLinks[4].textContent = translations[lang].shippingPolicy;
+            policyLinks[5].textContent = translations[lang].personalDataProtection;
+
+            // Cập nhật Liên hệ
+            const contactSection = footer.querySelectorAll('.col-lg-4')[2]; // Chọn đúng cột chứa Liên hệ
+            contactSection.querySelector('.footer-title').textContent = translations[lang].contact;
+            const contactLinks = contactSection.querySelectorAll('ul li');
+            contactLinks[0].querySelector('a').textContent = translations[lang].address;
+            contactLinks[1].querySelector('span').textContent = translations[lang].phone;
+            contactLinks[2].querySelector('a').textContent = translations[lang].email;
+
+            // Tuyển dụng và Nhượng quyền
+            const jobLinks = contactSection.querySelectorAll('.d-flex.gap-3 a');
+            jobLinks[0].textContent = translations[lang].recruitment;
+            jobLinks[1].textContent = translations[lang].franchise;
+
+            // Cập nhật phần Tải ứng dụng
+            contactSection.querySelector('.app-download span').textContent = translations[lang].downloadApp;
+        }
+
+        // Thêm sự kiện khi người dùng chọn ngôn ngữ
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
+        // Liên kết giữa các trang và tải footer
+        function loadComponent(component, elementId) {
+            fetch(component)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+
+        window.onload = function () {
+            loadComponent('/Home/html/footer.html', 'footer');
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

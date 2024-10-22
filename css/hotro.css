@@ -1,0 +1,155 @@
+
+    /* Màu sắc */
+
+    .navbar-nav .nav-link{
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .d-flex .nav-link {
+        font-size: 17px;  
+        padding: 1px;     
+        margin-left: 10px;
+        margin-right: 0;  
+    }
+    
+    .d-flex.align-items-center {
+        margin-left: 0;   
+    }
+    
+
+
+    body {
+        background-color: #f8f9fa; 
+    }
+    
+    .navbar {
+        background-image: linear-gradient(#3d0066ce, #160066e1, #3f0082fb);
+
+    }
+    
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+    }
+    
+    .navbar-brand:hover,
+    .nav-link:hover {
+        color: #df678c !important;
+    }
+    /* Thêm khoảng cách cho đăng nhập và đăng ký */
+    .nav-link.login {
+        margin-right: 20px; 
+    }
+
+/* logo */
+.navbar-brand img {
+    width: 50px; ;
+    height: 50px;
+}
+
+
+.service-box img {
+    max-width: 100px;
+}
+
+.service-box h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+/* Tổng quan trang */
+.support-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Tiêu đề */
+h2.text-center {
+    color: rgba(0, 0, 0, 0.697);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p.text-center.mb-4 {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Contact Methods */
+.contact-methods .support-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card h5 {
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.support-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.support-card .btn-primary {
+    background-color: #3D2AA0;
+    color: #df678c;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.support-card .btn-primary:hover {
+    background-color: #df678c;
+    color: #3D2AA0;
+}
+
+.contact-methods .support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq h3.text-center {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.697);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.faq-list .list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 15px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.faq-list .list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+

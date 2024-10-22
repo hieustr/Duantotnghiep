@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Titans- Dịch Vụ Tiện Lợi Mọi Nhà</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Home/css/homecustomer.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Home/html/HomeCustomer.html"><img src="/Home/img/logo.png" alt=""
+                    style="height: 55px; width: 55px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dịch Vụ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Giúp việc theo giờ</a></li>
+                            <li><a class="dropdown-item" href="#">Tổng vệ sinh</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh sau xây dựng</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh văn phòng</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt thảm</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh bể bơi</a></li>
+                            <li><a class="dropdown-item" href="#">Giặt rèm cửa</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn dẹp nhà cửa dịp lễ</a></li>
+                            <li><a class="dropdown-item" href="#">Vệ sinh máy lạnh</a></li>
+                            <li><a class="dropdown-item" href="#">Dọn vệ sinh trường học</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotro.html">Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="khieunai.html">Khiếu nại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đánh giá TechTitans</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center ">
+                    <a class="nav-link login" href="doimatkhau.html">Đổi mật khẩu</a>
+                    <a class="nav-link" href="Home.html">Đăng xuất</a>
+
+                    <!-- Ngôn ngữ -->
+                    <div class="dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ngôn Ngữ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="vi"
+                                    style="display: flex; align-items: center;">
+                                    <img src="/Home/img/vietnam.png" alt="Vietnam Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    Tiếng Việt
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="en"
+                                    style="display: flex; align-items: center;">
+                                    <img src="/Home/img/england.png" alt="Vietnam Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    English
+
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Carousel Banner -->
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="banner-section text-center d-flex justify-content-center align-items-center"
+                    style="height: 500px; background-color: #f8f9fa;">
+                    <div class="container">
+                        <h1>Giúp việc nhà theo giờ</h1>
+                        <p>Dịch vụ giúp việc nhà chuyên nghiệp, tiện lợi và đáng tin cậy.</p>
+                        <div class="form-group">
+                            <input type="submit" value="Đặt lịch ngay" class="btn btn-primary">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="banner-section text-center d-flex justify-content-center align-items-center"
+                    style="height: 500px; background-color: #e9ecef;">
+                    <div class="container">
+                        <h1>Tổng vệ sinh</h1>
+                        <p>Giải pháp vệ sinh toàn diện cho ngôi nhà của bạn.</p>
+                        <div class="form-group">
+                            <input type="submit" value="Đặt lịch ngay" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="banner-section text-center d-flex justify-content-center align-items-center"
+                    style="height: 500px; background-color: #dee2e6;">
+                    <div class="container">
+                        <h1>Vệ sinh văn phòng</h1>
+                        <p>Dịch vụ vệ sinh văn phòng chuyên nghiệp và đáng tin cậy.</p>
+                        <div class="form-group">
+                            <input type="submit" value="Đặt lịch ngay" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Dịch vụ -->
+    <section class="services-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Các Dịch Vụ Dọn Dẹp Yêu Thích</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 1" class="img-fluid mb-3">
+                        <h4>Giúp việc theo giờ</h4>
+                        <p>Dịch vụ giúp việc theo giờ linh hoạt, dễ dàng đặt lịch.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 2" class="img-fluid mb-3">
+                        <h4>Tổng vệ sinh</h4>
+                        <p>Dịch vụ tổng vệ sinh cho căn hộ, nhà ở và văn phòng.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 3" class="img-fluid mb-3">
+                        <h4>Vệ sinh sau xây dựng</h4>
+                        <p>Giải pháp vệ sinh sau xây dựng đảm bảo không gian sạch sẽ.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 4" class="img-fluid mb-3">
+                        <h4>Vệ sinh văn phòng</h4>
+                        <p>Dịch vụ dọn dẹp văn phòng chuyên nghiệp và hiệu quả.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 5" class="img-fluid mb-3">
+                        <h4>Giặt thảm</h4>
+                        <p>Dịch vụ giặt thảm chuyên sâu cho gia đình và văn phòng.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 6" class="img-fluid mb-3">
+                        <h4>Vệ sinh bể bơi</h4>
+                        <p>Giải pháp vệ sinh bể bơi sạch sẽ, an toàn và hiệu quả.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 7" class="img-fluid mb-3">
+                        <h4>Giặt rèm cửa</h4>
+                        <p>Dịch vụ giặt rèm cửa với kỹ thuật làm sạch hiện đại.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 8" class="img-fluid mb-3">
+                        <h4>Dọn dẹp nhà cửa dịp lễ</h4>
+                        <p>Giúp ngôi nhà sạch sẽ, gọn gàng để đón chào dịp lễ.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 9" class="img-fluid mb-3">
+                        <h4>Vệ sinh máy lạnh</h4>
+                        <p>Dịch vụ vệ sinh và bảo trì máy lạnh định kỳ.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 10" class="img-fluid mb-3">
+                        <h4>Dọn vệ sinh trường học</h4>
+                        <p>Dịch vụ vệ sinh trường học đảm bảo không gian sạch sẽ.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 10" class="img-fluid mb-3">
+                        <h4>Dọn vệ sinh đường</h4>
+                        <p>Dịch vụ vệ sinh trường học đảm bảo không gian sạch sẽ.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="https://via.placeholder.com/150" alt="Dịch vụ 10" class="img-fluid mb-3">
+                        <h4>Dọn vệ sinh xe máy</h4>
+                        <p>Dịch vụ vệ sinh trường học đảm bảo không gian sạch sẽ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- JavaScript -->
+    <script>
+        // Tạo một đối tượng chứa văn bản cho cả hai ngôn ngữ
+        const translations = {
+            vi: {
+                home: 'Trang Chủ',
+                services: 'Dịch Vụ',
+                about: 'Giới Thiệu',
+                contact: 'Liên Hệ',
+                support: 'Hỗ trợ',
+                complain: 'Khiếu nại',
+                rating: 'Đánh giá TechTiTans',
+                login: 'Đăng nhập',
+                register: 'Đăng ký',
+                language: 'Ngôn ngữ',
+
+                servicesTitle: 'Các Dịch Vụ Dọn Dẹp Yêu Thích',
+                service1Title: "Giúp việc theo giờ",
+                service1Desc: "Dịch vụ giúp việc theo giờ linh hoạt, dễ dàng đặt lịch.",
+                service2Title: "Tổng vệ sinh",
+                service2Desc: "Dịch vụ tổng vệ sinh cho căn hộ, nhà ở và văn phòng.",
+                service3Title: "Vệ sinh sau xây dựng",
+                service3Desc: "Giải pháp vệ sinh sau xây dựng đảm bảo không gian sạch sẽ.",
+                service4Title: "Vệ sinh văn phòng",
+                service4Desc: "Dịch vụ dọn dẹp văn phòng chuyên nghiệp và hiệu quả.",
+                service5Title: "Giặt thảm",
+                service5Desc: "Dịch vụ giặt thảm chuyên sâu cho gia đình và văn phòng.",
+                service6Title: "Vệ sinh bể bơi",
+                service6Desc: "Giải pháp vệ sinh bể bơi sạch sẽ, an toàn và hiệu quả.",
+                service7Title: "Giặt rèm cửa",
+                service7Desc: "Dịch vụ giặt rèm cửa với kỹ thuật làm sạch hiện đại.",
+                service8Title: "Dọn dẹp nhà cửa dịp lễ",
+                service8Desc: "Giúp ngôi nhà sạch sẽ, gọn gàng để đón chào dịp lễ.",
+                service9Title: "Vệ sinh máy lạnh",
+                service9Desc: "Dịch vụ vệ sinh và bảo trì máy lạnh định kỳ.",
+                service10Title: "Dọn vệ sinh trường học",
+                service10Desc: "Dịch vụ vệ sinh trường học đảm bảo không gian sạch sẽ.",
+                service11Title: "Dọn vệ sinh đường",
+                service11Desc: "Dịch vụ vệ sinh trường học đảm bảo không gian sạch sẽ.",
+                service12Title: "Dọn vệ sinh xe máy",
+                service12Desc: "Dịch vụ vệ sinh trường học đảm bảo không gian sạch sẽ.",
+
+                bannerHeading: 'Giúp việc nhà theo giờ',
+                bannerHeading1: 'Tổng vệ sinh',
+                bannerHeading2: 'Vệ sinh văn phòng',
+
+
+                bannerText: 'Dịch vụ giúp việc nhà chuyên nghiệp, tiện lợi và đáng tin cậy.',
+                bannerText1: 'Giải pháp vệ sinh toàn diện cho ngôi nhà của bạn.',
+                bannerText2: 'Dịch vụ vệ sinh văn phòng chuyên nghiệp và đáng tin cậy.',
+
+                btnText: 'Đặt lịch ngay',
+                btnText1: 'Đặt lịch ngay',
+                btnText2: 'Đặt lịch ngay',
+
+                // Nội dung footer
+                businessLicenseNumber: "Số GCNĐKDN",
+                pharmacyLicenseNumber: "Số GCN đủ điều kiện kinh doanh dược",
+                businessType: "Loại hình kinh doanh",
+                retailBusiness: "Cơ sở bán lẻ thuốc, Nhà thuốc",
+                businessLicense: "Giấy phép kinh doanh",
+                policySupport: "Chính sách và hỗ trợ",
+                aboutUs1: "Giới thiệu",
+                transactionConditions: "Điều kiện giao dịch chung",
+                termsOfUse: "Điều khoản sử dụng",
+                paymentPrivacy: "Bảo mật thông tin thanh toán",
+                shippingPolicy: "Chính sách vận chuyển và giao nhận",
+                personalDataProtection: "Chính sách bảo vệ dữ liệu cá nhân",
+                contact: "Liên hệ",
+                address: "207 Đ. Lê Đại Hành, Phường 13, Quận 11, Hồ Chí Minh",
+                phone: "(028) 73022068",
+                email: "hotro@circa.vn",
+                recruitment: "Tuyển dụng",
+                franchise: "Nhượng quyền",
+                downloadApp: "Tải app tại:",
+            },
+            en: {
+                home: 'Home',
+                services: 'Services',
+                about: 'About Us',
+                contact: 'Contact',
+                support: 'Support',
+                complain: ' Complain',
+                rating: 'Rating TechTiTans',
+                login: 'Login',
+                register: 'Register',
+                language: 'Language',
+
+                servicesTitle: 'Favorite Cleaning Services',
+                service1Title: "Hourly Maid Service",
+                service1Desc: "Flexible hourly maid service, easy to schedule.",
+                service2Title: "Deep Cleaning",
+                service2Desc: "Comprehensive cleaning service for apartments, homes, and offices.",
+                service3Title: "Post-Construction Cleaning",
+                service3Desc: "Post-construction cleaning solutions ensuring a clean space.",
+                service4Title: "Office Cleaning",
+                service4Desc: "Professional and efficient office cleaning service.",
+                service5Title: "Carpet Cleaning",
+                service5Desc: "Deep carpet cleaning service for homes and offices.",
+                service6Title: "Pool Cleaning",
+                service6Desc: "Safe, effective pool cleaning solutions.",
+                service7Title: "Curtain Cleaning",
+                service7Desc: "Modern cleaning techniques for curtain washing.",
+                service8Title: "Holiday House Cleaning",
+                service8Desc: "Ensure a clean and tidy home ready for the holiday season.",
+                service9Title: "Air Conditioner Cleaning",
+                service9Desc: "Regular air conditioner cleaning and maintenance service.",
+                service10Title: "School Cleaning",
+                service10Desc: "Ensure a clean and hygienic school environment.",
+                service11Title: "Street Cleaning",
+                service11Desc: "Professional street cleaning service for a cleaner environment.",
+                service12Title: "Motorbike Cleaning",
+                service12Desc: "Efficient motorbike cleaning service for a pristine vehicle.",
+
+
+
+                bannerHeading: 'Hourly House Cleaning',
+                bannerHeading1: 'General Cleaning',
+                bannerHeading2: 'Office cleaning',
+
+                bannerText: 'Professional, convenient, and reliable house cleaning services.',
+                bannerText1: 'Comprehensive cleaning solution for your home.',
+                bannerText2: 'Professional and reliable office cleaning service.',
+
+                btnText: "Book Now",
+                btnText1: "Book Now",
+                btnText2: "Book Now",
+
+                // Nội dung footer
+                businessLicenseNumber: "Business License Number",
+                pharmacyLicenseNumber: "Pharmacy License Number",
+                businessType: "Business Type",
+                retailBusiness: "Retail Pharmacy Business",
+                businessLicense: "Business License",
+                policySupport: "Policies and Support",
+                aboutUs1: "About Us",
+                transactionConditions: "Transaction Conditions",
+                termsOfUse: "Terms of Use",
+                paymentPrivacy: "Payment Privacy",
+                shippingPolicy: "Shipping and Delivery Policy",
+                personalDataProtection: "Personal Data Protection Policy",
+                contact: "Contact",
+                address: "207 Le Dai Hanh, Ward 13, District 11, Ho Chi Minh City",
+                phone: "(028) 73022068",
+                email: "hotro@circa.vn",
+                recruitment: "Recruitment",
+                franchise: "Franchise",
+                downloadApp: "Download the app at:",
+            }
+        };
+
+        // Hàm thay đổi ngôn ngữ
+        function changeLanguage(lang) {
+            document.querySelector('.nav-link.active').textContent = translations[lang].home;
+            document.querySelectorAll('.nav-link')[1].textContent = translations[lang].services;
+            document.querySelectorAll('.nav-link')[2].textContent = translations[lang].about;
+            document.querySelectorAll('.nav-link')[3].textContent = translations[lang].contact;
+            document.querySelectorAll('.nav-link')[4].textContent = translations[lang].support;
+            document.querySelectorAll('.nav-link')[5].textContent = translations[lang].complain;
+            document.querySelectorAll('.nav-link')[6].textContent = translations[lang].rating;
+            document.querySelectorAll('.nav-link')[7].textContent = translations[lang].login;
+            document.querySelectorAll('.nav-link')[8].textContent = translations[lang].register;
+            document.querySelectorAll('.nav-link')[9].textContent = translations[lang].language;
+
+
+
+            // Cập nhật nội dung của Slide 1
+            document.querySelectorAll('.carousel-item')[0].querySelector('h1').textContent = translations[lang].bannerHeading;
+            document.querySelectorAll('.carousel-item')[0].querySelector('p').textContent = translations[lang].bannerText;
+
+            // Cập nhật nội dung của Slide 2
+            document.querySelectorAll('.carousel-item')[1].querySelector('h1').textContent = translations[lang].bannerHeading1;
+            document.querySelectorAll('.carousel-item')[1].querySelector('p').textContent = translations[lang].bannerText1;
+
+            // Cập nhật nội dung của Slide 3
+            document.querySelectorAll('.carousel-item')[2].querySelector('h1').textContent = translations[lang].bannerHeading2;
+            document.querySelectorAll('.carousel-item')[2].querySelector('p').textContent = translations[lang].bannerText2;
+
+
+            // Cập nhật nút của Slide 1
+            document.querySelectorAll('.carousel-item')[0].querySelector('input[type="submit"]').value = translations[lang].btnText;
+
+            // Cập nhật nút của Slide 2
+            document.querySelectorAll('.carousel-item')[1].querySelector('input[type="submit"]').value = translations[lang].btnText1;
+
+            // Cập nhật nút của Slide 3
+            document.querySelectorAll('.carousel-item')[2].querySelector('input[type="submit"]').value = translations[lang].btnText2;
+
+
+            // Cập nhật các dịch vụ dọn dẹp
+            document.querySelector('.services-section h2').textContent = translations[lang].servicesTitle;
+
+            document.querySelectorAll('.service-box h4')[0].textContent = translations[lang].service1Title;
+            document.querySelectorAll('.service-box p')[0].textContent = translations[lang].service1Desc;
+
+            document.querySelectorAll('.service-box h4')[1].textContent = translations[lang].service2Title;
+            document.querySelectorAll('.service-box p')[1].textContent = translations[lang].service2Desc;
+
+            document.querySelectorAll('.service-box h4')[2].textContent = translations[lang].service3Title;
+            document.querySelectorAll('.service-box p')[2].textContent = translations[lang].service3Desc;
+
+            document.querySelectorAll('.service-box h4')[3].textContent = translations[lang].service4Title;
+            document.querySelectorAll('.service-box p')[3].textContent = translations[lang].service4Desc;
+
+            document.querySelectorAll('.service-box h4')[4].textContent = translations[lang].service5Title;
+            document.querySelectorAll('.service-box p')[4].textContent = translations[lang].service5Desc;
+
+            document.querySelectorAll('.service-box h4')[5].textContent = translations[lang].service6Title;
+            document.querySelectorAll('.service-box p')[5].textContent = translations[lang].service6Desc;
+
+            document.querySelectorAll('.service-box h4')[6].textContent = translations[lang].service7Title;
+            document.querySelectorAll('.service-box p')[6].textContent = translations[lang].service7Desc;
+
+            document.querySelectorAll('.service-box h4')[7].textContent = translations[lang].service8Title;
+            document.querySelectorAll('.service-box p')[7].textContent = translations[lang].service8Desc;
+
+            document.querySelectorAll('.service-box h4')[8].textContent = translations[lang].service9Title;
+            document.querySelectorAll('.service-box p')[8].textContent = translations[lang].service9Desc;
+
+            document.querySelectorAll('.service-box h4')[9].textContent = translations[lang].service10Title;
+            document.querySelectorAll('.service-box p')[9].textContent = translations[lang].service10Desc;
+
+            document.querySelectorAll('.service-box h4')[10].textContent = translations[lang].service11Title;
+            document.querySelectorAll('.service-box p')[10].textContent = translations[lang].service11Desc;
+
+            document.querySelectorAll('.service-box h4')[11].textContent = translations[lang].service12Title;
+            document.querySelectorAll('.service-box p')[11].textContent = translations[lang].service12Desc;
+
+
+            // Footer    
+            const footer = document.querySelector('.footer');
+
+            // Cập nhật Logo và Chứng nhận
+            footer.querySelector('ul li:nth-child(1)').innerHTML = `${translations[lang].businessLicenseNumber}: <span class="fw-medium">0317045088</span>`;
+            footer.querySelector('ul li:nth-child(2)').innerHTML = `${translations[lang].pharmacyLicenseNumber}: <span class="fw-medium">11048/ĐKKDD-HCM</span>`;
+            footer.querySelector('ul li:nth-child(3)').innerHTML = `${translations[lang].businessType}: <span class="fw-medium">${translations[lang].retailBusiness}</span>`;
+            footer.querySelector('ul li:nth-child(4) a').textContent = translations[lang].businessLicense;
+
+            // Cập nhật Chính sách và hỗ trợ
+            const policySupportSection = footer.querySelectorAll('.col-lg-4')[1]; // Chọn đúng cột chứa Chính sách và Hỗ trợ
+            policySupportSection.querySelector('.footer-title').textContent = translations[lang].policySupport;
+            const policyLinks = policySupportSection.querySelectorAll('ul li a');
+            policyLinks[0].textContent = translations[lang].aboutUs;
+            policyLinks[1].textContent = translations[lang].transactionConditions;
+            policyLinks[2].textContent = translations[lang].termsOfUse;
+            policyLinks[3].textContent = translations[lang].paymentPrivacy;
+            policyLinks[4].textContent = translations[lang].shippingPolicy;
+            policyLinks[5].textContent = translations[lang].personalDataProtection;
+
+            // Cập nhật Liên hệ
+            const contactSection = footer.querySelectorAll('.col-lg-4')[2]; // Chọn đúng cột chứa Liên hệ
+            contactSection.querySelector('.footer-title').textContent = translations[lang].contact;
+            const contactLinks = contactSection.querySelectorAll('ul li');
+            contactLinks[0].querySelector('a').textContent = translations[lang].address;
+            contactLinks[1].querySelector('span').textContent = translations[lang].phone;
+            contactLinks[2].querySelector('a').textContent = translations[lang].email;
+
+            // Tuyển dụng và Nhượng quyền
+            const jobLinks = contactSection.querySelectorAll('.d-flex.gap-3 a');
+            jobLinks[0].textContent = translations[lang].recruitment;
+            jobLinks[1].textContent = translations[lang].franchise;
+
+            // Cập nhật phần Tải ứng dụng
+            contactSection.querySelector('.app-download span').textContent = translations[lang].downloadApp;
+
+        }
+
+        // Thêm sự kiện khi người dùng chọn ngôn ngữ
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
+        //liên kết giữa các trang 
+
+        function loadComponent(component, elementId) {
+            fetch(component)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                });
+        }
+        window.onload = function () {
+            loadComponent('footer.html', 'footer');
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

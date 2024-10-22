@@ -1,64 +1,723 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý khách hàng</title>
+    <title>Quản lý Khách Hàng - Tech Titans</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Home/css/home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .nav-link.active {
+            color: #e91e63 !important;
+        }
+
+        /* Page Title */
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #9166ff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Container Styles */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Add Customer Button */
+        .add-customer {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .add-customer button {
+            background-color: #9166ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .add-customer button:hover {
+            background-color: #9166ff;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #9166ff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Actions Buttons */
+        .actions a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Green */
+        }
+
+        .actions a:hover {
+            background-color: #45a049;
+        }
+
+        .actions a.delete {
+            background-color: #f44336; /* Red */
+        }
+
+        .actions a.delete:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Search and Pagination */
+        #searchInput {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #1e2ce9; /* Màu hồng khi chọn ô tìm kiếm */
+        }
+
+        button {
+            background-color: #e91e1e; /* Màu hồng cho nút */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #d81b60; /* Màu hồng đậm hơn khi di chuột */
+        }
+
+        #pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #pagination button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        #pagination #currentPage {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #prevPage:disabled,
+        #nextPage:disabled {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+
+        /* Responsive cho ô tìm kiếm và nút */
+        @media screen and (max-width: 600px) {
+            #searchInput {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+        /* Form Styles */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #9166ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #9166ff;
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1 class="my-4">Quản lý khách hàng</h1>
+    <!-- Thanh Điều Hướng (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Home/html/Home.html">
+                <img src="/Home/img/logoTechTitan.jpg" alt="Tech Titans Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/Home/html/Home.html">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dịch Vụ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="/Home/html/services.html#giup-viec-theo-gio">Giúp việc theo giờ</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#tong-ve-sinh">Tổng vệ sinh</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#ve-sinh-sau-xay-dung">Vệ sinh sau xây dựng</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#ve-sinh-van-phong">Vệ sinh văn phòng</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#giat-tham">Giặt thảm</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#ve-sinh-be-boi">Vệ sinh bể bơi</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#giat-rem-cua">Giặt rèm cửa</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#dọn-dẹp-nha-cua-dip-le">Dọn dẹp nhà cửa dịp lễ</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#ve-sinh-may-lanh">Vệ sinh máy lạnh</a></li>
+                            <li><a class="dropdown-item" href="/Home/html/services.html#ve-sinh-truong-hoc">Vệ sinh trường học</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/html/About.html">Giới Thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/html/Contact.html">Liên Hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hỗ trợ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Khiếu nại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đánh giá TechTitans</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <a class="nav-link login" href="/Home/html/dangnhap.html">Đăng nhập</a>
+                    <a class="nav-link" href="/Home/html/dangky.html">Đăng ký</a>
 
-        <!-- Form Thêm mới khách hàng -->
-        <form method="post" action="/customers">
-            <div class="mb-3">
-                <label for="name" class="form-label">Họ và tên</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                    <!-- Ngôn ngữ -->
+                    <div class="dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ngôn Ngữ
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="vi" style="display: flex; align-items: center;">
+                                    <img src="/Home/img/vietnam.png" alt="Vietnam Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    Tiếng Việt
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="en" style="display: flex; align-items: center;">
+                                    <img src="/Home/img/england.png" alt="English Flag"
+                                        style="width: 20px; height: 14px; margin-left: 2px; margin-right: 5px;">
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Số điện thoại</label>
-                <input type="text" class="form-control" id="phone" name="phone" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Thêm khách hàng</button>
-        </form>
+        </nav>
 
-        <!-- Danh sách khách hàng -->
-        <h2 class="my-4">Danh sách khách hàng</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Tên</th>
-                    <th>Email</th>
-                    <th>Số điện thoại</th>
-                    <th>Hành động</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Lặp qua danh sách khách hàng -->
-                <!-- Ví dụ sử dụng Thymeleaf trong Spring Boot -->
-                <tr th:each="customer : ${customers}">
-                    <td th:text="${customer.id}">1</td>
-                    <td th:text="${customer.name}">Nguyễn Văn A</td>
-                    <td th:text="${customer.email}">nguyenvana@gmail.com</td>
-                    <td th:text="${customer.phone}">0123456789</td>
-                    <td>
-                        <a href="/customers/edit/${customer.id}" class="btn btn-warning btn-sm">Sửa</a>
-                        <a href="/customers/delete/${customer.id}" class="btn btn-danger btn-sm">Xóa</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <!-- Page Title -->
+        <h1>Quản lý khách hàng</h1>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <div class="container">
+
+            <!-- Form thêm khách hàng -->
+            <form id="addCustomerForm" method="POST">
+                <label for="name">Tên khách hàng:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Giới tính:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" required>
+
+                <input type="submit" value="Thêm khách hàng">
+            </form>
+
+            <!-- Danh sách khách hàng -->
+            <div class="add-customer">
+                <button onclick="document.getElementById('addCustomerForm').scrollIntoView()">Thêm khách hàng</button>
+            </div>
+
+            <!-- Form tìm kiếm -->
+            <div class="d-flex justify-content-start mb-3">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm khách hàng...">
+                <button onclick="searchCustomer()">Tìm kiếm</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên khách hàng</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày đăng ký</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="customerTableBody">
+                    <!-- Dữ liệu khách hàng sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+
+            <!-- Phân trang -->
+            <div id="pagination">
+                <button id="prevPage" disabled>Trang trước</button>
+                <span id="currentPage">Trang 1</span>
+                <button id="nextPage">Trang sau</button>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center py-4 bg-light">
+            <p>&copy; 2024 Tech Titans. All rights reserved.</p>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            // Tạo một đối tượng chứa văn bản cho cả hai ngôn ngữ
+            const translations = {
+                vi: {
+                    home: 'Trang Chủ',
+                    services: 'Dịch Vụ',
+                    about: 'Giới Thiệu',
+                    contact: 'Liên Hệ',
+                    support: 'Hỗ trợ',
+                    complain: 'Khiếu nại',
+                    rating: 'Đánh giá TechTitans',
+                    login: 'Đăng nhập',
+                    register: 'Đăng ký',
+                    language: 'Ngôn ngữ',
+                    addCustomer: 'Thêm khách hàng',
+                    searchPlaceholder: 'Tìm kiếm khách hàng...',
+                    searchButton: 'Tìm kiếm',
+                    tableHeaders: {
+                        id: 'ID',
+                        name: 'Tên khách hàng',
+                        email: 'Email',
+                        phone: 'Số điện thoại',
+                        registrationDate: 'Ngày đăng ký',
+                        actions: 'Thao tác'
+                    },
+                    actions: {
+                        edit: 'Sửa',
+                        delete: 'Xóa'
+                    },
+                    footerText: '© 2024 Tech Titans. Bản quyền thuộc về tất cả.'
+                },
+                en: {
+                    home: 'Home',
+                    services: 'Services',
+                    about: 'About Us',
+                    contact: 'Contact',
+                    support: 'Support',
+                    complain: 'Complain',
+                    rating: 'Rating TechTitans',
+                    login: 'Login',
+                    register: 'Register',
+                    language: 'Language',
+                    addCustomer: 'Add Customer',
+                    searchPlaceholder: 'Search customers...',
+                    searchButton: 'Search',
+                    tableHeaders: {
+                        id: 'ID',
+                        name: 'Customer Name',
+                        email: 'Email',
+                        phone: 'Phone Number',
+                        registrationDate: 'Registration Date',
+                        actions: 'Actions'
+                    },
+                    actions: {
+                        edit: 'Edit',
+                        delete: 'Delete'
+                    },
+                    footerText: '© 2024 Tech Titans. All rights reserved.'
+                }
+            };
+
+            // Default language
+            let currentLanguage = 'vi';
+
+            // Hàm thay đổi ngôn ngữ
+            function changeLanguage(lang) {
+                currentLanguage = lang;
+                document.querySelectorAll('.nav-link').forEach((link, index) => {
+                    switch (index) {
+                        case 0:
+                            link.textContent = translations[lang].home;
+                            link.href = "/Home/html/Home.html";
+                            break;
+                        case 1:
+                            link.textContent = translations[lang].services;
+                            link.href = "/Home/html/services.html";
+                            break;
+                        case 2:
+                            link.textContent = translations[lang].about;
+                            link.href = "/Home/html/About.html";
+                            break;
+                        case 3:
+                            link.textContent = translations[lang].contact;
+                            link.href = "/Home/html/Contact.html";
+                            break;
+                        case 4:
+                            link.textContent = translations[lang].support;
+                            break;
+                        case 5:
+                            link.textContent = translations[lang].complain;
+                            break;
+                        case 6:
+                            link.textContent = translations[lang].rating;
+                            break;
+                        case 7:
+                            link.textContent = translations[lang].login;
+                            link.href = "/Home/html/dangnhap.html";
+                            break;
+                        case 8:
+                            link.textContent = translations[lang].register;
+                            link.href = "/Home/html/dangky.html";
+                            break;
+                        case 9:
+                            link.textContent = translations[lang].language;
+                            break;
+                        default:
+                            break;
+                    }
+                });
+
+                // Cập nhật các phần khác trên trang
+                // Tiêu đề trang
+                document.querySelector('h1').textContent = lang === 'vi' ? 'Quản lý khách hàng' : 'Customer Management';
+
+                // Form thêm khách hàng
+                document.querySelector('label[for="name"]').textContent = lang === 'vi' ? 'Tên khách hàng:' : 'Customer Name:';
+                document.querySelector('label[for="dob"]').textContent = lang === 'vi' ? 'Ngày sinh:' : 'Date of Birth:';
+                document.querySelector('label[for="gender"]').textContent = lang === 'vi' ? 'Giới tính:' : 'Gender:';
+                document.querySelector('label[for="phone"]').textContent = lang === 'vi' ? 'Số điện thoại:' : 'Phone Number:';
+                document.querySelector('label[for="email"]').textContent = lang === 'vi' ? 'Email:' : 'Email:';
+                document.querySelector('label[for="address"]').textContent = lang === 'vi' ? 'Địa chỉ:' : 'Address:';
+                document.querySelector('input[type="submit"]').value = lang === 'vi' ? 'Thêm khách hàng' : 'Add Customer';
+
+                // Nút thêm khách hàng
+                document.querySelector('.add-customer button').textContent = lang === 'vi' ? 'Thêm khách hàng' : 'Add Customer';
+
+                // Form tìm kiếm
+                document.getElementById('searchInput').placeholder = translations[lang].searchPlaceholder;
+                document.querySelector('#pagination + div button').textContent = translations[lang].searchButton;
+
+                // Tiêu đề bảng
+                const headers = document.querySelectorAll('th');
+                headers[0].textContent = translations[lang].tableHeaders.id;
+                headers[1].textContent = translations[lang].tableHeaders.name;
+                headers[2].textContent = translations[lang].tableHeaders.email;
+                headers[3].textContent = translations[lang].tableHeaders.phone;
+                headers[4].textContent = translations[lang].tableHeaders.registrationDate;
+                headers[5].textContent = translations[lang].tableHeaders.actions;
+
+                // Thao tác bảng
+                const actionLinks = document.querySelectorAll('.actions a.edit');
+                actionLinks.forEach(link => {
+                    link.textContent = translations[lang].actions.edit;
+                });
+                const deleteLinks = document.querySelectorAll('.actions a.delete');
+                deleteLinks.forEach(link => {
+                    link.textContent = translations[lang].actions.delete;
+                });
+
+                // Footer
+                document.querySelector('footer p').textContent = translations[lang].footerText;
+            }
+
+            // Thêm sự kiện khi người dùng chọn ngôn ngữ
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const lang = this.getAttribute('data-lang');
+                    changeLanguage(lang);
+                });
+            });
+
+            // Load footer từ file footer.html nếu cần
+            // function loadComponent(component, elementId) {
+            //     fetch(component)
+            //         .then(response => response.text())
+            //         .then(data => {
+            //             document.getElementById(elementId).innerHTML = data;
+            //         })
+            //         .catch(error => console.error('Error loading component:', error));
+            // }
+
+            // window.onload = function () {
+            //     loadComponent('/Home/html/footer.html', 'footer');
+            // }
+
+            // JavaScript cho quản lý khách hàng (placeholder)
+            let customers = [];
+            let currentPage = 1;
+            const rowsPerPage = 5;
+
+            document.getElementById('addCustomerForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                addCustomer();
+            });
+
+            function addCustomer() {
+                const name = document.getElementById('name').value.trim();
+                const dob = document.getElementById('dob').value;
+                const gender = document.getElementById('gender').value;
+                const phone = document.getElementById('phone').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const address = document.getElementById('address').value.trim();
+                const registrationDate = new Date().toLocaleDateString();
+
+                const id = customers.length + 1;
+
+                const customer = { id, name, dob, gender, phone, email, address, registrationDate };
+                customers.push(customer);
+                renderTable();
+                document.getElementById('addCustomerForm').reset();
+            }
+
+            function renderTable() {
+                const tableBody = document.getElementById('customerTableBody');
+                tableBody.innerHTML = '';
+
+                const start = (currentPage - 1) * rowsPerPage;
+                const end = start + rowsPerPage;
+                const paginatedCustomers = customers.slice(start, end);
+
+                paginatedCustomers.forEach(customer => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td>${customer.id}</td>
+                        <td>${customer.name}</td>
+                        <td>${customer.email}</td>
+                        <td>${customer.phone}</td>
+                        <td>${customer.registrationDate}</td>
+                        <td class="actions">
+                            <a href="#" class="edit btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="delete btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    `;
+
+                    // Thêm sự kiện cho nút Edit và Delete
+                    row.querySelector('.edit').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        editCustomer(customer.id);
+                    });
+
+                    row.querySelector('.delete').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        deleteCustomer(customer.id);
+                    });
+
+                    tableBody.appendChild(row);
+                });
+
+                updatePagination();
+            }
+
+            function editCustomer(id) {
+                const customer = customers.find(c => c.id === id);
+                if (customer) {
+                    // Hiển thị thông tin khách hàng trong form để chỉnh sửa
+                    document.getElementById('name').value = customer.name;
+                    document.getElementById('dob').value = customer.dob;
+                    document.getElementById('gender').value = customer.gender;
+                    document.getElementById('phone').value = customer.phone;
+                    document.getElementById('email').value = customer.email;
+                    document.getElementById('address').value = customer.address;
+
+                    // Xóa khách hàng cũ
+                    customers = customers.filter(c => c.id !== id);
+                    renderTable();
+                }
+            }
+
+            function deleteCustomer(id) {
+                if (confirm('Bạn có chắc chắn muốn xóa khách hàng này không?')) {
+                    customers = customers.filter(c => c.id !== id);
+                    renderTable();
+                }
+            }
+
+            function searchCustomer() {
+                const query = document.getElementById('searchInput').value.trim().toLowerCase();
+                if (query === '') {
+                    renderTable();
+                    return;
+                }
+
+                const filteredCustomers = customers.filter(c =>
+                    c.name.toLowerCase().includes(query) ||
+                    c.email.toLowerCase().includes(query) ||
+                    c.phone.toLowerCase().includes(query)
+                );
+
+                const tableBody = document.getElementById('customerTableBody');
+                tableBody.innerHTML = '';
+
+                filteredCustomers.forEach(customer => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td>${customer.id}</td>
+                        <td>${customer.name}</td>
+                        <td>${customer.email}</td>
+                        <td>${customer.phone}</td>
+                        <td>${customer.registrationDate}</td>
+                        <td class="actions">
+                            <a href="#" class="edit btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="delete btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    `;
+
+                    // Thêm sự kiện cho nút Edit và Delete
+                    row.querySelector('.edit').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        editCustomer(customer.id);
+                    });
+
+                    row.querySelector('.delete').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        deleteCustomer(customer.id);
+                    });
+
+                    tableBody.appendChild(row);
+                });
+
+                // Ẩn phân trang khi tìm kiếm
+                document.getElementById('pagination').style.display = 'none';
+            }
+
+            function updatePagination() {
+                const totalPages = Math.ceil(customers.length / rowsPerPage);
+                document.getElementById('currentPage').textContent = `Trang ${currentPage}`;
+
+                document.getElementById('prevPage').disabled = currentPage === 1;
+                document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
+            }
+
+            document.getElementById('prevPage').addEventListener('click', function () {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderTable();
+                }
+            });
+
+            document.getElementById('nextPage').addEventListener('click', function () {
+                const totalPages = Math.ceil(customers.length / rowsPerPage);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderTable();
+                }
+            });
+
+            // Initial render
+            renderTable();
+        </script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>

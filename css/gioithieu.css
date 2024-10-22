@@ -1,0 +1,152 @@
+    /* Màu sắc */
+
+    .navbar-nav .nav-link{
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .d-flex .nav-link {
+        font-size: 17px;  
+        padding: 1px;     
+        margin-left: 10px;
+        margin-right: 0;  
+    }
+    
+    .d-flex.align-items-center {
+        margin-left: 0;   
+    }
+    
+
+
+    body {
+        background-color: #f8f9fa; 
+    }
+    
+    .navbar {
+        background-image: linear-gradient(#3d0066ce, #160066e1, #3f0082fb);
+
+    }
+    
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+    }
+    
+    .navbar-brand:hover,
+    .nav-link:hover {
+        color: #df678c !important;
+    }
+    /* Thêm khoảng cách cho đăng nhập và đăng ký */
+    .nav-link.login {
+        margin-right: 20px; 
+    }
+
+/* logo */
+.navbar-brand img {
+    width: 50px; ;
+    height: 50px;
+}
+
+
+.service-box img {
+    max-width: 100px;
+}
+
+.service-box h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+.about-header {
+    background: url('/Home/img/about-header.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.697);
+    padding: 100px 0;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: rgba(0, 0, 0, 0.697);
+}
+
+.team-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.testimonial h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+input.btn.btn-primary {
+    color: #df678c; 
+    font-weight: 700; 
+    background-color: #3D2AA0;
+    width: auto; 
+    border: none; 
+    border-radius: 25px;
+    padding: 10px 20px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+
+  
+}
+input.btn.btn-primary:hover {
+    background-color: #df678c; 
+    color: #3D2AA0;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-header {
+        padding: 60px 0;
+    }
+
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
